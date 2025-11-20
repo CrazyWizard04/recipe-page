@@ -30,7 +30,7 @@ body {
 }
 
 main {
-  max-width: 720px;
+  max-width: 700px;
   margin: auto;
   background-color: var(--white);
 }
@@ -42,11 +42,11 @@ hr {
 
 /* -----REUSABLE STYLES----- */
 .list {
-  list-style-position: inside;
-  padding-left: 8px;
+  list-style-position: outside;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   color: var(--stone-600);
 }
 
@@ -128,6 +128,19 @@ hr {
 
 .recipe-steps ul li::marker {
   color: var(--brown-800);
+}
+
+.recipe-steps ul li span {
+  font-weight: 700;
+}
+
+.recipe-steps:nth-of-type(2) ul {
+  list-style: decimal;
+}
+
+.recipe-steps:nth-of-type(2) ul li::marker {
+  color: var(--brown-800);
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
