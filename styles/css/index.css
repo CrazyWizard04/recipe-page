@@ -14,6 +14,8 @@
   --font-paragraph: 16px;
 }
 
+/* -----GLOBAL RESET & TYPOGRAPHY----- */
+
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +35,27 @@ main {
   background-color: var(--white);
 }
 
+hr {
+  border-top: 2px solid var(--stone-150);
+  border-radius: 5px;
+}
+
+/* -----REUSABLE STYLES----- */
+.list {
+  list-style-position: inside;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--stone-600);
+}
+
+.list li {
+  font-size: var(--font-paragraph);
+  font-weight: 400;
+  color: inherit;
+}
+
 .recipe-img {
   overflow: hidden;
 }
@@ -42,8 +65,13 @@ main {
 }
 
 .recipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 32px;
 }
+
+/*  -----HEADER----- */
 
 .recipe-container header {
   display: flex;
@@ -65,6 +93,8 @@ main {
   line-height: 1.5;
 }
 
+/* -----PREPARATION BOX----- */
+
 .preparation-time {
   padding: 24px;
   background-color: var(--rose-50);
@@ -78,27 +108,26 @@ main {
   margin-bottom: 12px;
 }
 
-.preparation-time ul {
-  list-style-position: inside;
-  padding-left: 8px;
-  color: var(--stone-600);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.preparation-time ul li {
-  font-size: var(--font-paragraph);
-  font-weight: 400;
-  color: var(--stone-600);
-}
-
 .preparation-time ul li::marker {
   color: var(--rose-800);
 }
 
 .preparation-time ul li span {
   font-weight: 700;
+}
+
+/* -----RECIPE-STEPS----- */
+
+.recipe-steps h1 {
+  font-family: "Young Serif", sans-serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  color: var(--brown-800);
+  margin-bottom: 16px;
+}
+
+.recipe-steps ul li::marker {
+  color: var(--brown-800);
 }
 
 @media (min-width: 768px) {
