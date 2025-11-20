@@ -35,6 +35,34 @@ main {
   background-color: var(--white);
 }
 
+h1 {
+  font-family: "Young Serif", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: "Young Serif", sans-serif;
+  font-size: 2.2em;
+  font-weight: 400;
+  color: var(--brown-800);
+}
+
+h4 {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--rose-800);
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: var(--font-paragraph);
+  font-weight: 400;
+  color: var(--stone-600);
+  line-height: 1.5;
+}
+
 hr {
   border-top: 2px solid var(--stone-150);
   border-radius: 5px;
@@ -64,33 +92,13 @@ hr {
   width: 100%;
 }
 
+/* -----RECIPE-CONTAINER----- */
+
 .recipe-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 32px;
-}
-
-/*  -----HEADER----- */
-
-.recipe-container header {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.recipe-container header h1 {
-  font-family: "Young Serif", sans-serif;
-  font-size: 3em;
-  font-weight: 400;
-  line-height: 1.1;
-}
-
-.recipe-container header p {
-  font-size: var(--font-paragraph);
-  font-weight: 400;
-  color: var(--stone-600);
-  line-height: 1.5;
 }
 
 /* -----PREPARATION BOX----- */
@@ -99,13 +107,6 @@ hr {
   padding: 24px;
   background-color: var(--rose-50);
   border-radius: 12px;
-}
-
-.preparation-time h2 {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: var(--rose-800);
-  margin-bottom: 12px;
 }
 
 .preparation-time ul li::marker {
@@ -118,12 +119,10 @@ hr {
 
 /* -----RECIPE-STEPS----- */
 
-.recipe-steps h1 {
-  font-family: "Young Serif", sans-serif;
-  font-size: 2.2em;
-  font-weight: 400;
-  color: var(--brown-800);
-  margin-bottom: 16px;
+.recipe-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .recipe-steps ul li::marker {
@@ -141,6 +140,30 @@ hr {
 .recipe-steps:nth-of-type(2) ul li::marker {
   color: var(--brown-800);
   font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr, td {
+  padding: 12px 32px;
+  text-align: left;
+  color: var(--stone-600);
+}
+
+td:nth-child(2) {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+tr {
+  border-bottom: 2px solid var(--stone-150);
+}
+
+tr:last-child {
+  border: none;
 }
 
 @media (min-width: 768px) {
