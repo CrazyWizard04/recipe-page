@@ -30,14 +30,12 @@ body {
 }
 
 main {
-  max-width: 700px;
-  margin: auto;
   background-color: var(--white);
 }
 
 h1 {
   font-family: "Young Serif", sans-serif;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 400;
   line-height: 1.1;
 }
@@ -68,10 +66,20 @@ hr {
   border-radius: 5px;
 }
 
+footer {
+  text-align: center;
+  color: var(--stone-600);
+  font-size: var(--font-paragraph);
+}
+
+footer a {
+  color: var(--brown-800);
+}
+
 /* -----REUSABLE STYLES----- */
+
 .list {
   list-style-position: outside;
-  padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -79,13 +87,16 @@ hr {
 }
 
 .list li {
+  margin-left: 20px;
+  padding-left: 16px;
   font-size: var(--font-paragraph);
   font-weight: 400;
-  color: inherit;
+  line-height: 1.5;
 }
 
 .recipe-img {
   overflow: hidden;
+  animation: slide-in 0.5s ease;
 }
 
 .recipe-img img {
@@ -99,6 +110,7 @@ hr {
   flex-direction: column;
   gap: 24px;
   padding: 32px;
+  animation: fade-in 1s ease;
 }
 
 /* -----PREPARATION BOX----- */
@@ -109,12 +121,8 @@ hr {
   border-radius: 12px;
 }
 
-.preparation-time ul li::marker {
+.preparation-time ul ::marker {
   color: var(--rose-800);
-}
-
-.preparation-time ul li span {
-  font-weight: 700;
 }
 
 /* -----RECIPE-STEPS----- */
@@ -125,21 +133,14 @@ hr {
   gap: 20px;
 }
 
-.recipe-steps ul li::marker {
+.recipe-steps ul ::marker {
   color: var(--brown-800);
 }
 
-.recipe-steps ul li span {
-  font-weight: 700;
-}
-
-.recipe-steps:nth-of-type(2) ul {
-  list-style: decimal;
-}
-
-.recipe-steps:nth-of-type(2) ul li::marker {
+.recipe-steps ol ::marker {
   color: var(--brown-800);
   font-weight: 700;
+  font-variant: inherit;
 }
 
 table {
@@ -147,7 +148,8 @@ table {
   border-collapse: collapse;
 }
 
-tr, td {
+tr,
+td {
   padding: 12px 32px;
   text-align: left;
   color: var(--stone-600);
@@ -172,6 +174,8 @@ tr:last-child {
   }
 
   main {
+    max-width: 700px;
+    margin: auto;
     border-radius: 20px;
   }
 
@@ -187,5 +191,28 @@ tr:last-child {
 
   .recipe-container {
     padding: 0 32px 32px 32px;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
